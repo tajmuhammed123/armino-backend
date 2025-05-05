@@ -16,12 +16,12 @@ const startServer = async () => {
 
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("✅ MongoDB connected");
+    console.log("MongoDB connected");
 
     const { url } = await server.listen({ port: 4000 });
-    console.log(`🚀 Server running at ${url}`);
+    console.log(`Server running at ${url}`);
   } catch (err) {
-    console.error("❌ Server failed to start:", err);
+    console.error("Server failed to start:", err);
   }
 };
 
